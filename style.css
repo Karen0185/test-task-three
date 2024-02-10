@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    width: 500px;
+}
+
+li {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}
+
+.has-child {
+    position: relative;
+    transition: all .3s;
+}
+
+.has-child::after {
+    content: '>';
+    top: 0;
+    left: -10px;
+    position: absolute;
+    transition: all .3s ;
+}
+
+.has-child.show::after {
+    transform: rotate(90deg);
+    transition: all .3s;
+}
